@@ -1,0 +1,59 @@
+Install pyautogui:
+pip install pyautogui
+
+# mostra a posição atual do mouse
+posicao = pyautogui.position()
+
+#importando as bibliotecas
+import pyautogui
+import time
+
+#move o mouse para a posição definida na tela
+pyautogui.moveTo(100, 200, duration=2)
+
+# Controle para clicar com o mouse
+import pyautogui
+
+
+#Pausa o script por 2 segundos
+time.sleep(2)
+
+#Clica com o mouse na posição 100, 200 com click simples
+pyautogui.click(100, 200)   
+
+#Clique duplo
+pyautogui.doubleClick(100, 200)
+
+#Clique com o botão direito do mouse
+pyautogui.rightClick(100, 200)
+
+
+#Controle de teclado
+pyautogui.write('Hello world', interval=0.1)
+
+#Pressionando uma tecla específica
+pyautogui.press('enter')
+
+
+#Tarefa com horario marcado
+import pyautogui
+import time
+import datetime 
+
+#hora de inicio
+hora_de_inicio = datetime.time(20,30)
+
+#Pega o horario atual
+agora = datetime.datetime.now()
+
+#cria um datetime para o horario de inicio
+
+alvo = datetime.datetime.combine(agora.date(),hora_de_inicio)
+
+#Calcula o tempo de espera
+
+segundos_para_esperar = (alvo - agora).total_seconds()
+
+# Execução da tarefa
+time.sleep(segundos_para_esperar)
+
